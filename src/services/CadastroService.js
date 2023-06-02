@@ -1,5 +1,24 @@
 import { AxiosClient } from "./Api"
 
+export async function carregarPerfil(id) {
+    try {
+        const res = await AxiosClient.get(`/usuarios/${id}`);
+        return res.data
+    } catch (error) {
+      console.log(error);  
+    }
+}
+
+export async function atualizarUsuario(idUser, dados) {
+    try {
+        const res = await AxiosClient.put(`/usuarios/${idUser}`, dados);
+        return res.data
+    } catch (error) {
+      console.log(error);  
+    }
+}
+
+
 export async function criarConta(dados) {
     try {
         await AxiosClient.post('/usuarios', {

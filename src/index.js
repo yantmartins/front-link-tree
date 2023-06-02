@@ -65,14 +65,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const isLogged = true
 
 root.render(
-  <React.StrictMode>
+  <>
     {
       isLogged ? 
       <RouterProvider router={routerLogged} />
       :
       <RouterProvider router={routerNotLogged} />
     }
-  </React.StrictMode>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -39,7 +39,7 @@ export function Login() {
 
   const makeLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:3001/login", {
+      const res = await axios.post("https://fabrica.lambdatech.com.br/usuarios/login", {
         email,
         senha: password,
       });
